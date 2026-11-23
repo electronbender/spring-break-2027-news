@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spring Break 2027 News</title>
+<meta name="description" content="Spring Break 2027 news: peak weeks, top-ranked destinations, early package prices, confirmed festival and DJ lineups, and local beach rules, each with a one-tap AI prompt for the latest update.">
+<link rel="canonical" href="https://news.springbreak.com/">
+<meta property="og:title" content="Spring Break 2027 News">
+<meta property="og:description" content="Peak weeks, rankings, package prices, lineups and beach rules for Spring Break 2027.">
+<meta property="og:image" content="https://news.springbreak.com/assets/img/cancun-beach.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Tokens match springbreak.com (spring_test_1/assets/styles.css) */
+  :root{
+    --bg:#fffaf3; --surface:#ffffff; --surface-2:#fff1e0; --ink:#1d1a2b; --ink-2:#555068; --line:#eadfd2;
+    --accent:#ff5a36; --accent-ink:#ffffff; --sea:#0e8f9c; --sun:#ffb627;
+    --ok:#138a52; --ok-bg:#e2f6ea; --mid:#9a6200; --mid-bg:#fff1cc; --tba:#6b6680; --tba-bg:#efedf4;
+    --hot:#d1362a; --hot-bg:#ffe4de;
+    --hero-a:#ff7a45; --hero-b:#ff3d7f; --hero-c:#6a3df0;
+    --shadow:0 1px 2px rgba(29,26,43,.06), 0 6px 24px rgba(29,26,43,.06);
+    --radius:16px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#14121d; --surface:#1d1a29; --surface-2:#262236; --ink:#f4f0ff; --ink-2:#b2abc8; --line:#332e45;
+      --accent:#ff6e4d; --sea:#3cc4cf;
+      --ok:#5fd99a; --ok-bg:#173226; --mid:#ffcc66; --mid-bg:#3a2f14; --tba:#b2abc8; --tba-bg:#2a2638;
+      --hot:#ff8a7a; --hot-bg:#3a1c1a;
+      --hero-a:#c2410c; --hero-b:#be185d; --hero-c:#4c1d95;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 24px rgba(0,0,0,.25);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#14121d; --surface:#1d1a29; --surface-2:#262236; --ink:#f4f0ff; --ink-2:#b2abc8; --line:#332e45;
+    --accent:#ff6e4d; --sea:#3cc4cf;
+    --ok:#5fd99a; --ok-bg:#173226; --mid:#ffcc66; --mid-bg:#3a2f14; --tba:#b2abc8; --tba-bg:#2a2638;
+    --hot:#ff8a7a; --hot-bg:#3a1c1a;
+    --hero-a:#c2410c; --hero-b:#be185d; --hero-c:#4c1d95;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 24px rgba(0,0,0,.25);
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:72px}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:"Bricolage Grotesque",Inter,sans-serif;line-height:1.1;margin:0}
+  a{color:var(--sea)}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+
+  /* Top bar */
+  .topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:20px;padding:10px 16px;
+    background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .logo{font:800 20px "Bricolage Grotesque";color:var(--ink);text-decoration:none;white-space:nowrap}
+  .logo .sep{color:var(--line);margin:0 2px}
+  .logo .tag-news span{color:var(--accent)}
+  .topbar nav{display:flex;gap:18px;flex:1;overflow-x:auto;scrollbar-width:none}
+  .topbar nav::-webkit-scrollbar{display:none}
+  .topbar nav a{color:var(--ink-2);text-decoration:none;font-weight:500;white-space:nowrap}
+  .topbar nav a:hover{color:var(--ink)}
+  .engine-pick{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-2);flex-shrink:0}
+  .engine-pick select{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:5px 8px}
+  @media (max-width:720px){.topbar{flex-wrap:wrap;gap:8px 16px}.topbar nav{order:3;flex-basis:100%}}
+  @media (max-width:420px){.logo{font-size:17px}.engine-pick > span{display:none}}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(135deg,var(--hero-a),var(--hero-b) 55%,var(--hero-c))}
+  .hero-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:64px 16px 110px}
+  .kicker{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;opacity:.9;margin:0 0 12px}
+  .hero h1{font-size:clamp(46px,9vw,104px);font-weight:800;letter-spacing:-.03em}
+  .hero h1 em{font-style:normal;color:var(--sun)}
+  .lede{max-width:660px;font-size:17px;opacity:.95;margin:18px 0 28px}
+  .hero-stats{display:flex;flex-wrap:wrap;gap:12px}
+  .hero-stats div{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:12px 16px;min-width:160px;flex:1 1 160px;max-width:240px}
+  .hero-stats b{display:block;font:700 26px "Bricolage Grotesque"}
+  .hero-stats span{font-size:13px;opacity:.9}
+  .hero-chips{margin-top:28px}
+  .hero-chips p{margin:0 0 10px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.14em;opacity:.9}
+  .sun{position:absolute;right:-80px;top:-80px;width:420px;height:420px;border-radius:50%;
+    background:radial-gradient(circle,rgba(255,214,102,.9),rgba(255,182,39,0) 70%)}
+  .waves{position:absolute;left:0;bottom:-1px;width:100%;height:70px;fill:var(--bg)}
+
+  .notice{margin-top:-28px;position:relative;z-index:2;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:14px 18px;box-shadow:var(--shadow);color:var(--ink-2);font-size:14px}
+  .notice b{color:var(--ink)}
+
+  /* Sections */
+  .section{padding-top:64px}
+  .section-head{margin-bottom:20px}
+  .section-head h2{font-size:clamp(26px,4vw,36px);font-weight:800;letter-spacing:-.02em}
+  .section-head p{color:var(--ink-2);margin:6px 0 0;max-width:720px}
+  .eyebrow{margin:0 0 4px;font-size:12px;color:var(--ink-2);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+
+  /* Cards */
+  .grid{display:grid;gap:16px}
+  .grid-2{grid-template-columns:repeat(auto-fill,minmax(340px,1fr))}
+  .grid-3{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+  .grid-4{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+  @media (max-width:400px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px;min-width:0}
+  .card h3{font-size:20px;font-weight:700}
+  .card p{margin:0;color:var(--ink-2)}
+  .card-head{display:flex;justify-content:space-between;align-items:start;gap:10px}
+  .card-foot{margin-top:auto;display:flex;flex-direction:column;gap:8px;padding-top:6px}
+  .badge{flex-shrink:0;font-size:11px;font-weight:600;padding:3px 9px;border-radius:99px;white-space:nowrap}
+  .b-ok{color:var(--ok);background:var(--ok-bg)} .b-mid{color:var(--mid);background:var(--mid-bg)}
+  .b-tba{color:var(--tba);background:var(--tba-bg)} .b-hot{color:var(--hot);background:var(--hot-bg)}
+  .tags{display:flex;flex-wrap:wrap;gap:6px}
+  .tag{font-size:12px;padding:2px 8px;border-radius:6px;background:var(--surface-2);color:var(--ink-2);border:1px solid var(--line);white-space:nowrap}
+  .note{margin:0;font-size:13px;color:var(--ink-2);border-left:3px solid var(--sun);padding-left:10px}
+  .facts{margin:0;padding-left:18px;display:grid;gap:6px;font-size:14px}
+
+  /* Story cards */
+  .story{padding:0;overflow:hidden}
+  .story > *:not(.thumb){margin-left:18px;margin-right:18px}
+  .story > .card-foot{margin-bottom:18px}
+  .thumb{position:relative;aspect-ratio:16/9;background:var(--surface-2);overflow:hidden}
+  .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+  .story:hover .thumb img{transform:scale(1.04)}
+  .thumb .rank{position:absolute;left:12px;bottom:10px;font:800 13px "Bricolage Grotesque";color:#fff;background:rgba(0,0,0,.55);padding:4px 10px;border-radius:99px}
+  .story h3{margin-top:4px}
+  .story .facts{color:var(--ink-2)}
+  .lead-story{grid-column:1/-1;display:grid;grid-template-columns:1.2fr 1fr;gap:0}
+  .lead-story .thumb{aspect-ratio:auto;min-height:280px}
+  .lead-story .lead-body{padding:22px;display:flex;flex-direction:column;gap:12px;margin:0}
+  .lead-story h3{font-size:clamp(24px,3vw,32px);font-weight:800;letter-spacing:-.02em}
+  @media (max-width:760px){.lead-story{grid-template-columns:1fr}.lead-story .thumb{min-height:0;aspect-ratio:16/9}}
+
+  /* Calendar */
+  .timeline{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+  .wk{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+  .wk h4{font-size:18px;margin:6px 0 4px}
+  .wk p{margin:0;font-size:13.5px;color:var(--ink-2)}
+
+  /* Rankings */
+  .ranks{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px}
+  .ranks li{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 14px}
+  .ranks .n{font:800 26px "Bricolage Grotesque";color:var(--accent);min-width:38px}
+  .ranks b{display:block;font-weight:600}
+  .ranks small{color:var(--ink-2);font-size:12.5px}
+  .ranks .mini-ask{margin-left:auto;font-size:12.5px;font-weight:600;text-decoration:none;white-space:nowrap}
+
+  /* Prices */
+  .price{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+  .price b{font:800 34px "Bricolage Grotesque";color:var(--ink)}
+  .price small{color:var(--ink-2);font-size:13px}
+
+  /* Lineups */
+  .events{list-style:none;margin:0;padding:10px 12px;background:var(--surface-2);border-radius:12px;display:grid;gap:8px}
+  .events li{display:flex;gap:10px;align-items:start}
+  .events b{display:block;font-weight:600;font-size:14px}
+  .events small{color:var(--ink-2);font-size:12.5px}
+  .dot{width:8px;height:8px;border-radius:50%;margin-top:7px;flex-shrink:0}
+  .dot-ok{background:var(--ok)} .dot-mid{background:var(--sun)} .dot-tba{background:var(--tba)}
+  .artists{display:flex;flex-wrap:wrap;gap:6px}
+  .artists span{font-size:13px;font-weight:600;padding:4px 10px;border-radius:99px;background:var(--surface-2);border:1px solid var(--line)}
+
+  /* Buttons (springbreak.com) */
+  .ask{display:flex;gap:8px;flex-wrap:wrap}
+  .btn{font:600 13.5px Inter,sans-serif;border-radius:10px;padding:9px 13px;cursor:pointer;text-decoration:none;border:1px solid transparent;display:inline-flex;align-items:center;gap:6px}
+  .btn-ask{background:var(--accent);color:var(--accent-ink)}
+  .btn-ask:hover{filter:brightness(1.07)}
+  .engine-name{font-weight:400;opacity:.85}
+  .btn-ghost{background:transparent;color:var(--ink-2);border-color:var(--line)}
+  .btn-ghost:hover{color:var(--ink);border-color:var(--ink-2)}
+  .btn-lg{font-size:15px;padding:12px 18px}
+  .btn:focus-visible,.chip:focus-visible,a:focus-visible,select:focus-visible,textarea:focus-visible,input:focus-visible{outline:2px solid var(--sea);outline-offset:2px}
+
+  /* Prompt chips */
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font:600 13.5px Inter,sans-serif;border-radius:99px;padding:8px 14px;cursor:pointer;background:var(--surface);color:var(--ink);border:1px solid var(--line);text-align:left}
+  .chip:hover,.chip.active{border-color:var(--accent);color:var(--accent)}
+  .hero .chip{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.4);color:#fff}
+  .hero .chip:hover{background:#fff;color:var(--ink);border-color:#fff}
+
+  /* Ask AI planner */
+  .planner{display:grid;grid-template-columns:1fr 1.1fr;gap:16px;align-items:start}
+  @media (max-width:860px){.planner{grid-template-columns:1fr}}
+  .chip-group{margin-bottom:16px}
+  .chip-group > span{display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2);margin-bottom:8px}
+  label{font-weight:600;font-size:13px;display:block;margin-bottom:6px}
+  textarea,input,select.field{width:100%;font:500 15px Inter,sans-serif;padding:11px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+  textarea{min-height:170px;resize:vertical}
+  .fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media (max-width:520px){.fields{grid-template-columns:1fr}}
+  .hint{font-size:12.5px;color:var(--ink-2);margin:0}
+
+  /* FAQ */
+  .faq{max-width:820px}
+  details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:2px 18px;margin-bottom:10px}
+  summary{cursor:pointer;font-weight:600;padding:14px 0;list-style:none;display:flex;justify-content:space-between;gap:10px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-size:20px;line-height:1;color:var(--accent)}
+  details[open] summary::after{content:"–"}
+  details p{margin:0 0 14px;color:var(--ink-2)}
+
+  footer{margin-top:72px;border-top:1px solid var(--line);padding:32px 0 40px;color:var(--ink-2);font-size:13.5px}
+  footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px}
+  @media (max-width:640px){footer .cols{grid-template-columns:1fr}}
+  footer h4{font-size:15px;color:var(--ink);margin-bottom:8px}
+  footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+  footer a{color:var(--ink-2);text-decoration:none}
+  footer a:hover{color:var(--accent)}
+  .fine{margin-top:24px;font-size:12px}
+
+  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(120px);background:var(--ink);color:var(--bg);padding:11px 18px;border-radius:99px;font-weight:600;font-size:14px;transition:transform .3s;z-index:100;max-width:calc(100% - 32px);text-align:center}
+  .toast.show{transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body id="top">
+
+<header class="topbar">
+  <a class="logo" href="https://springbreak.com/" title="Back to Springbreak.com">Springbreak.com <span class="sep">|</span> <span class="tag-news">News<span>’27</span></span></a>
+  <nav aria-label="Sections">
+    <a href="#stories">Top stories</a><a href="#calendar">Calendar</a><a href="#rankings">Rankings</a><a href="#prices">Prices</a><a href="#lineups">Lineups</a><a href="#rules">Beach rules</a><a href="#ask">Ask AI</a><a href="#faq">FAQ</a>
+  </nav>
+  <label class="engine-pick">
+    <span>Ask with</span>
+    <select id="engine" aria-label="AI assistant used for prompt links">
+      <option value="claude">Claude</option>
+      <option value="chatgpt">ChatGPT</option>
+      <option value="perplexity">Perplexity</option>
+      <option value="copilot">Copilot</option>
+      <option value="grok">Grok</option>
+      <option value="googleai">Google AI Mode</option>
+    </select>
+  </label>
+</header>
+
+<section class="hero">
+  <div class="sun" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="kicker">Spring Break 2027 News · Updated November 23, 2026</p>
+    <h1>Spring Break<br><em>2027 News</em></h1>
+    <p class="lede">An early Easter moves peak spring break into March 6–28. Tour operators have opened early-bird pricing, Ultra and LVIN Cabo have named headliners, and Florida beach towns have posted their March rules.</p>
+    <div class="hero-stats">
+      <div><b id="cd">–</b><span>days until peak weeks start (Mar 6)</span></div>
+      <div><b>Mar 28</b><span>Easter 2027</span></div>
+      <div><b>$749</b><span>lowest all-inclusive package seen</span></div>
+      <div><b>$375</b><span>early-bird savings per room</span></div>
+    </div>
+    <div class="hero-chips">
+      <p>⚡ Quick start: tap a prompt</p>
+      <div class="chips">
+        <button class="chip" data-prompt="bestWeek">🗓️ Which week should I go?</button>
+        <button class="chip" data-prompt="cheapest">💸 Cheapest 2027 package</button>
+        <button class="chip" data-prompt="festival">🎧 Ultra + spring break plan</button>
+        <button class="chip" data-prompt="rules">🚫 Beach rules by city</button>
+      </div>
+    </div>
+  </div>
+  <svg class="waves" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C240,80 480,0 720,30 C960,60 1200,10 1440,40 L1440,70 L0,70 Z"/></svg>
+</section>
+
+<div class="wrap">
+  <div class="notice"><b>How to use this page:</b> every story has an <b>✦ Ask</b> button. It opens the assistant chosen in <b>Ask with</b> (top right) with a prefilled prompt asking for the latest, sourced update, since prices and lineups change weekly. Or build your own question in <a href="#ask">Ask AI</a>.</div>
+
+  <!-- TOP STORIES -->
+  <section class="section" id="stories">
+    <div class="section-head">
+      <p class="eyebrow">Headlines</p>
+      <h2>Top stories</h2>
+      <p>The biggest Spring Break 2027 news so far, from student tour operators, festival promoters and city officials.</p>
+    </div>
+    <div class="grid grid-2" id="storyGrid"></div>
+  </section>
+
+  <!-- CALENDAR -->
+  <section class="section" id="calendar">
+    <div class="section-head">
+      <p class="eyebrow">2027 calendar</p>
+      <h2>Early Easter, early peak</h2>
+      <p>Easter falls on <b>March 28, 2027</b>, which pulls the peak spring break window into <b>March 6–28</b>. The busiest college travel weeks are projected to start <b>March 8</b> and <b>March 15</b>.</p>
+    </div>
+    <div class="timeline" id="weekGrid"></div>
+  </section>
+
+  <!-- RANKINGS -->
+  <section class="section" id="rankings">
+    <div class="section-head">
+      <p class="eyebrow">Where students are booking</p>
+      <h2>Top 10 destinations for 2027</h2>
+      <p>Caribbean and Mexico resorts lead early group bookings. STS Travel reports Cancún, Punta Cana, Nassau and Cabo San Lucas at the top. Tap <b>✦ Ask</b> on any spot for its latest 2027 update.</p>
+    </div>
+    <ol class="ranks" id="rankList"></ol>
+  </section>
+
+  <!-- PRICES -->
+  <section class="section" id="prices">
+    <div class="section-head">
+      <p class="eyebrow">Package prices & early deals</p>
+      <h2>What 2027 trips cost</h2>
+      <p>Baseline 2027 pricing from student tour operators and travel agencies for the peak March weeks. Prices are per person and change often, so check before you book.</p>
+    </div>
+    <div class="grid grid-3" id="priceGrid"></div>
+  </section>
+
+  <!-- LINEUPS -->
+  <section class="section" id="lineups">
+    <div class="section-head">
+      <p class="eyebrow">Confirmed concerts & DJs</p>
+      <h2>2027 lineups</h2>
+      <p>Festival and club headliners announced so far. Green means confirmed, yellow means partly announced, grey means still to be announced.</p>
+    </div>
+    <div class="grid grid-3" id="lineupGrid"></div>
+  </section>
+
+  <!-- RULES -->
+  <section class="section" id="rules">
+    <div class="section-head">
+      <p class="eyebrow">Local restrictions</p>
+      <h2>Beach rules & crackdowns</h2>
+      <p>Florida destinations keep strict March crowd-control measures. Know these before you pack a cooler.</p>
+    </div>
+    <div class="grid grid-3" id="ruleGrid"></div>
+  </section>
+
+  <!-- ASK AI -->
+  <section class="section" id="ask">
+    <div class="section-head">
+      <p class="eyebrow">Ask AI</p>
+      <h2>Get the latest, in one tap</h2>
+      <p>Tap a prefilled prompt, add your details, then send it to <span class="engine-label">Claude</span>. Every prompt asks for sources and publish dates, and flags anything not yet confirmed for 2027.</p>
+    </div>
+    <div class="planner">
+      <div class="card">
+        <h3>Prefilled prompts</h3>
+        <div id="chipGroups"></div>
+      </div>
+      <form class="card" id="askForm" onsubmit="return false">
+        <div><label for="prompt">Your question</label>
+          <textarea id="prompt" placeholder="Tap a prompt, or write your own question about Spring Break 2027…"></textarea></div>
+        <div class="fields">
+          <div><label for="dest">Destination</label><select class="field" id="dest"><option value="">Any / compare</option></select></div>
+          <div><label for="week">Week</label>
+            <select class="field" id="week">
+              <option value="">Not sure yet</option>
+              <option>Feb 28 – Mar 7</option><option>Mar 7 – Mar 14</option><option>Mar 14 – Mar 21</option><option>Mar 21 – Mar 28</option>
+            </select></div>
+          <div><label for="size">Group size</label><input id="size" type="number" min="1" max="60" value="4"></div>
+          <div><label for="city">Flying from</label><input id="city" placeholder="e.g. Chicago"></div>
+        </div>
+        <div class="ask">
+          <a class="btn btn-ask btn-lg" id="askEngine" href="#" target="_blank" rel="nofollow noopener">✦ Ask <span class="engine-label">Claude</span> ↗</a>
+          <button type="button" class="btn btn-ghost btn-lg" id="copyMain">Copy prompt</button>
+        </div>
+        <p class="hint">Your question opens in a new tab with the destination, week, group size and city added.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="section-head"><p class="eyebrow">Questions</p><h2>Spring Break 2027 news FAQ</h2></div>
+    <div class="faq">
+      <details><summary>When is spring break 2027?</summary><p>Most colleges break between late February and early April. Because Easter is March 28, 2027, the peak window is March 6–28, and the busiest weeks are projected to start March 8 and March 15. Check your own school's calendar on <a href="https://springbreak.com/when-is-my-spring-break.html">springbreak.com</a>.</p></details>
+      <details><summary>Where is everyone going in 2027?</summary><p>Early group bookings put Cancún at #1, then Punta Cana, Nassau, South Padre Island and Cabo San Lucas. Miami, Las Vegas, Lake Havasu, Panama City Beach and Fort Lauderdale round out the top 10.</p></details>
+      <details><summary>How much does a 2027 package cost?</summary><p>Early 2027 all-inclusive air-and-hotel prices range from about $749 per person (select Riviera Maya resorts) to $2,491 (top-tier Punta Cana resorts). Cabo averages around $1,249 and Nassau about $1,398.</p></details>
+      <details><summary>Can I drink on the beach?</summary><p>Not in several Florida spots. Panama City Beach bans alcohol on the sand all of March, and Fort Lauderdale bans alcohol, coolers, tents and amplified music on the beach. Miami Beach runs DUI checkpoints, bag checks and early liquor-store curfews.</p></details>
+      <details><summary>How current is this page?</summary><p>The news was compiled on November 23, 2026. Every card has an ✦ Ask button that asks your chosen AI assistant to search the web for the latest, with sources and dates.</p></details>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div><a class="logo" href="https://springbreak.com/">Springbreak.com <span class="sep">|</span> <span class="tag-news">News<span>’27</span></span></a>
+        <p>Spring Break 2027 news for college students: dates, rankings, prices, lineups and local rules.</p></div>
+      <div><h4>News</h4><ul><li><a href="#stories">Top stories</a></li><li><a href="#prices">Prices</a></li><li><a href="#lineups">Lineups</a></li><li><a href="#rules">Beach rules</a></li></ul></div>
+      <div><h4>Springbreak.com</h4><ul><li><a href="https://springbreak.com/">Spring Break 2027 guide</a></li><li><a href="https://springbreak.com/when-is-my-spring-break.html">School dates</a></li><li><a href="https://cancun.springbreak.com/">Cancún 2027</a></li></ul></div>
+    </div>
+    <p class="fine">News compiled November 23, 2026 from student tour operators (STS Travel, Inertia Tours, Lamacchia Travel, BreakNow, LVIN Cabo), festival promoters and city and county officials. Prices, lineups and rules change. Confirm with the seller or city before you travel. Drink responsibly; most U.S. destinations require you to be 21 to drink.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+  // ================= DATA (edit here) =================
+  const IMG = f => `assets/img/${f}`;
+
+  // Top 10 ranking from the Nov 23, 2026 brief. region: intl | us
+  const destinations = [
+    {rank:1,  name:"Cancún",             where:"Mexico",          region:"intl"},
+    {rank:2,  name:"Punta Cana",         where:"Dominican Republic", region:"intl"},
+    {rank:3,  name:"Nassau",             where:"Bahamas",         region:"intl"},
+    {rank:4,  name:"South Padre Island", where:"Texas",           region:"us"},
+    {rank:5,  name:"Cabo San Lucas",     where:"Mexico",          region:"intl"},
+    {rank:6,  name:"Miami & South Beach",where:"Florida",         region:"us"},
+    {rank:7,  name:"Las Vegas",          where:"Nevada",          region:"us"},
+    {rank:8,  name:"Lake Havasu",        where:"Arizona",         region:"us"},
+    {rank:9,  name:"Panama City Beach",  where:"Florida",         region:"us"},
+    {rank:10, name:"Fort Lauderdale",    where:"Florida",         region:"us"},
+  ];
+  // Puerto Vallarta is in the news but unranked
+  const extraDest = ["Puerto Vallarta"];
+
+  const stories = [
+    {lead:true, img:IMG("cancun-beach.jpg"), alt:"Turquoise water and white sand on a Cancún beach", rank:"#1 Cancún",
+     eyebrow:"Rankings · Caribbean & Mexico", title:"Cancún leads 2027 group bookings, with Punta Cana and Nassau close behind",
+     facts:["STS Travel reports Cancún (#1), Punta Cana (#2), Nassau (#3) and Cabo San Lucas (#5) leading 2027 group bookings.",
+            "Cancún's draw: high-capacity beachfront resorts like Grand Oasis Cancún and party packages covering Coco Bongo, Mandala and Mandala Beach.",
+            "In Nassau, demand centers on all-inclusive group stays like Breezes Resort and Atlantis day parties."],
+     badge:["b-ok","Reported"],
+     prompt:"What's the latest on Spring Break 2027 group bookings for Cancún, Punta Cana, Nassau and Cabo San Lucas? Rank them by current bookings, list the top resorts and party packages each tour operator is selling, and say which weeks are filling up fastest."},
+    {img:IMG("miami-marina.jpg"), alt:"Sunset over a Miami marina and skyline", rank:"#6 Miami",
+     eyebrow:"Festivals · Miami", title:"Miami's peak week lines up with Ultra, Miami Music Week and WMC",
+     facts:["Miami Music Week runs March 22–28, the Winter Music Conference March 24–26, and Ultra Music Festival March 26–28.",
+            "Ultra's Phase 1 headliners include Calvin Harris, Martin Garrix and a world-debut Marshmello B2B Subtronics set."],
+     badge:["b-ok","Confirmed"],
+     prompt:"Plan a Miami spring break 2027 trip around Ultra Music Festival (March 26–28), Miami Music Week (March 22–28) and the Winter Music Conference (March 24–26). Give ticket prices, the full announced lineups, the best pool parties and where to stay near Bayfront Park."},
+    {img:IMG("cabo-cove.jpg"), alt:"Moonlit cove and rock formations in Cabo San Lucas", rank:"#5 Cabo",
+     eyebrow:"Lineups · Cabo San Lucas", title:"LVIN Cabo names weekly headliners for March 2027",
+     facts:["SIDEPIECE (Mar 7–11), It's Murph (Mar 14–18), Odd Mob (Mar 21–25) and Whethan (Mar 28–Apr 1).",
+            "Cabo and Puerto Vallarta show strong early bookings, with dry desert-beach weather and the tail end of whale-watching season."],
+     badge:["b-ok","Confirmed"],
+     prompt:"Compare the LVIN Cabo spring break 2027 weeks: SIDEPIECE (March 7–11), It's Murph (March 14–18), Odd Mob (March 21–25) and Whethan (March 28–April 1). What does each 4-night package cost, what events are included, and how does the $20 deposit payment plan work?"},
+    {img:IMG("fort-lauderdale.jpg"), alt:"Aerial view of Fort Lauderdale beach and hotels", rank:"#10 Ft. Lauderdale",
+     eyebrow:"Local rules · Florida", title:"Fort Lauderdale and Panama City Beach keep their March crackdowns",
+     facts:["Fort Lauderdale bans alcohol, coolers, tents, tables and amplified music on the beach, plus motorized scooters on the barrier island.",
+            "Panama City Beach keeps its all-March ban on alcohol on the sand, with zero tolerance for underage drinking."],
+     badge:["b-hot","Enforced"],
+     prompt:"What are the official 2027 spring break rules in Fort Lauderdale, Panama City Beach and Miami Beach? List beach alcohol bans, cooler and speaker rules, parking fees, curfews, ID checks and fines, with links to each city's official page."},
+    {img:IMG("miami-beach.png"), alt:"High-rise hotels behind a Miami Beach shoreline", rank:"Deals",
+     eyebrow:"Prices · Early-bird deals", title:"Early-bird prices open: from $749 all-inclusive, up to $375 off",
+     facts:["Riviera Maya air-and-hotel packages start around $749 per person via Lamacchia Travel.",
+            "BreakNow is offering up to $375 off per room for bookings finalized before late November 2026."],
+     badge:["b-mid","Ends soon"],
+     prompt:"Which Spring Break 2027 early-bird deals are still open right now? Compare STS Travel, Inertia Tours, StudentCity, BreakNow and Lamacchia Travel: discount amount, deadline, deposit, and the cheapest all-inclusive package for Cancún, Punta Cana, Cabo and Nassau."},
+  ];
+
+  const weeks = [
+    {range:"Feb 28 – Mar 7", tag:["b-tba","Early"], note:"First Inertia Tours week for South Padre and Fort Lauderdale. Smaller crowds."},
+    {range:"Mar 7 – Mar 14", tag:["b-hot","🔥 Busiest"], note:"Projected busiest college week starts Mar 8. LVIN Cabo: SIDEPIECE."},
+    {range:"Mar 14 – Mar 21", tag:["b-hot","🔥 Busiest"], note:"Second busiest week starts Mar 15. LVIN Cabo: It's Murph."},
+    {range:"Mar 21 – Mar 28", tag:["b-mid","Peak"], note:"Miami Music Week, WMC and Ultra (Mar 26–28). Easter Sunday Mar 28."},
+  ];
+
+  const prices = [
+    {dest:"Cancún & Riviera Maya", rank:1, price:"$749", unit:"from, per person", seller:"Lamacchia Travel",
+     detail:"All-inclusive air + hotel at select Riviera Maya resorts. STS Travel's 7-day Cancún VIP club packages usually add $80–$150."},
+    {dest:"Cabo San Lucas", rank:5, price:"$1,249", unit:"average, per person", seller:"STS Travel",
+     detail:"Student air + hotel all-inclusive. LVIN Cabo also sells 4-night hotel-and-event packages with a $20 deposit and monthly payments."},
+    {dest:"Nassau, Bahamas", rank:3, price:"$1,398", unit:"average, per person", seller:"STS Travel",
+     detail:"All-inclusive air + hotel at properties like Breezes Resort."},
+    {dest:"Punta Cana", rank:2, price:"$1,569–$2,491", unit:"per person", seller:"Lamacchia Travel",
+     detail:"All-inclusive flight + resort bundles for 6–7 nights, depending on resort tier."},
+    {dest:"South Padre & Fort Lauderdale", rank:"4 & 10", price:"4 weeks", unit:"Feb 28 – Mar 28", seller:"Inertia Tours",
+     detail:"Inertia Tours has opened its 2027 trip schedules across four main weeks for South Padre Island and Fort Lauderdale."},
+    {dest:"Early-booking discount", rank:null, price:"Up to $375", unit:"off per room", seller:"BreakNow",
+     detail:"Early-bird promotion for bookings finalized before late November 2026."},
+  ];
+
+  const lineups = [
+    {dest:"Miami & South Beach", rank:6, event:"Ultra Music Festival", when:"Mar 26–28, 2027 · Bayfront Park", status:"ok",
+     artists:["Calvin Harris","Martin Garrix","Armin van Buuren","Dom Dolla","Steve Aoki","Afrojack","Marshmello B2B Subtronics"],
+     extra:[{b:"Miami Music Week",s:"Mar 22–28"},{b:"Winter Music Conference",s:"Mar 24–26"}], note:"Phase 1 headliners. The Marshmello B2B Subtronics set is a world debut."},
+    {dest:"Cabo San Lucas", rank:5, event:"LVIN Cabo weekly headliners", when:"March 2027", status:"ok", artists:[],
+     extra:[{b:"SIDEPIECE",s:"Mar 7–11"},{b:"It's Murph",s:"Mar 14–18"},{b:"Odd Mob",s:"Mar 21–25"},{b:"Whethan",s:"Mar 28 – Apr 1"}]},
+    {dest:"Cancún", rank:1, event:"STS Travel residencies", when:"Headliners usually announced by January", status:"mid", artists:[],
+     extra:[{b:"Grand Oasis Cancún",s:"Recurring DJ residencies"},{b:"Mandala Beach",s:"Day-club programming"},{b:"Coco Bongo",s:"Club nights"}],
+     note:"Individual headliner dates are not announced yet."},
+  ];
+
+  const rules = [
+    {dest:"Miami Beach", rank:6, level:["b-hot","Strict"], src:"https://www.miamibeachfl.gov/",
+     items:["$100 flat-rate visitor parking at garages","DUI checkpoints and bag checks at beach entrances","Early liquor-store curfews","Strict 21+ ID and dress codes at Ocean Drive and South Beach clubs"]},
+    {dest:"Fort Lauderdale", rank:10, level:["b-hot","Strict"], src:"https://www.fortlauderdale.gov/",
+     items:["No alcohol, coolers, tents, tables or amplified music on the beach","No open containers on downtown sidewalks","No electric or motorized scooters on the barrier island in March"]},
+    {dest:"Panama City Beach", rank:9, level:["b-hot","Strict"], src:"https://www.baycountyfl.gov/",
+     items:["No alcohol on the sand all of March (possession or drinking)","Extra patrols","Zero tolerance for underage drinking and disorderly conduct"]},
+  ];
+
+  // ================= PREFILLED PROMPTS =================
+  const promptGroups = [
+    {label:"Dates & where to go", items:[
+      ["bestWeek","🗓️ Which week should I go?","Which week should I take for Spring Break 2027? Easter is March 28, 2027 and the busiest college weeks are projected to start March 8 and March 15. Compare crowds, prices and events for each week from Feb 28 to Mar 28."],
+      ["topDest","🏆 Top 10 destinations","Rank the top 10 Spring Break 2027 destinations (Cancún, Punta Cana, Nassau, South Padre Island, Cabo San Lucas, Miami, Las Vegas, Lake Havasu, Panama City Beach, Fort Lauderdale) by current bookings, price, party scene and weather."],
+      ["usVsIntl","🌎 U.S. vs. international","Should my group do a U.S. or international spring break in 2027? Compare Cancún, Punta Cana and Nassau with South Padre, Miami and Las Vegas on total cost, drinking age, passports, safety and nightlife."],
+      ["weather","☀️ March weather","What's the March weather like in Cancún, Punta Cana, Nassau, Cabo, Puerto Vallarta, Miami, Las Vegas and Lake Havasu? Include water temperature and rain risk."],
+    ]},
+    {label:"Prices & deals", items:[
+      ["cheapest","💸 Cheapest 2027 package","What's the cheapest all-inclusive Spring Break 2027 package right now? Compare air-and-hotel prices from STS Travel, Lamacchia Travel, Inertia Tours, StudentCity and BreakNow for Cancún, Punta Cana, Cabo and Nassau."],
+      ["earlyBird","⏰ Early-bird deals still open","Which Spring Break 2027 early-bird deals are still open? List each operator's discount, deadline and deposit, including BreakNow's up to $375 off per room."],
+      ["vip","🎟️ Is a VIP pass worth it?","Is a Cancún spring break 2027 VIP club package worth it? STS Travel says they add $80–$150 to a 7-day stay. Compare what's included with paying club by club at Coco Bongo, Mandala and Mandala Beach."],
+      ["payPlan","🧾 Low-deposit payment plans","Which Spring Break 2027 operators offer the lowest deposits and monthly payment plans (like LVIN Cabo's $20 deposit)? Compare refund policies too."],
+    ]},
+    {label:"Concerts & parties", items:[
+      ["festival","🎧 Ultra + spring break plan","Plan a Miami spring break 2027 trip around Ultra Music Festival (March 26–28), Miami Music Week and the Winter Music Conference: tickets, full lineups, pool parties and where to stay."],
+      ["cabo","🌵 Best LVIN Cabo week","Which LVIN Cabo week is best for 2027: SIDEPIECE (Mar 7–11), It's Murph (Mar 14–18), Odd Mob (Mar 21–25) or Whethan (Mar 28–Apr 1)? Compare prices and events."],
+      ["vegas","🎰 Vegas pool-club season","What's opening for the 2027 Las Vegas pool-club season in March? List clubs, opening dates, headliners, cover prices and age rules."],
+      ["newLineups","📣 New lineup announcements","What new Spring Break 2027 concert and DJ lineups have been announced in the last two weeks, across Cancún, Cabo, Miami, South Padre, Panama City Beach and Las Vegas?"],
+    ]},
+    {label:"Rules & safety", items:[
+      ["rules","🚫 Beach rules by city","List the official Spring Break 2027 beach rules for Miami Beach, Fort Lauderdale and Panama City Beach: alcohol bans, coolers, speakers, parking, curfews and fines."],
+      ["safety","🛟 Safety & travel advisories","What are the current U.S. State Department advisories and practical safety tips for Spring Break 2027 in Cancún, Cabo, Punta Cana, Nassau and Puerto Vallarta?"],
+      ["passport","🛂 Passport & ID","What documents do U.S. college students need for spring break 2027 in Mexico, the Dominican Republic and the Bahamas, and how long does a passport take right now?"],
+    ]},
+  ];
+  const prompts = Object.fromEntries(promptGroups.flatMap(g => g.items.map(([k,,t]) => [k,t])));
+
+  const destPrompt = d =>
+    `Give me the latest Spring Break 2027 news for ${d.name}, ${d.where} (ranked #${d.rank} for 2027): ` +
+    `package prices from student tour operators, confirmed events and DJ lineups, best hotels, local rules and the busiest weeks.`;
+  const pricePrompt = p => `What are the current Spring Break 2027 package prices for ${p.dest}? Start from ${p.seller}'s figure (${p.price} ${p.unit}), then compare other operators, what's included, deposits and deadlines.`;
+  const lineupPrompt = l => `What's the latest ${l.event} lineup for ${l.dest} spring break 2027 (${l.when})? Include any newly announced artists, set dates, ticket prices and related parties.`;
+  const rulePrompt = r => `What are the official March 2027 spring break rules in ${r.dest}? Confirm each of these is still in force and list any new ones, with fines: ${r.items.join('; ')}.`;
+
+  // ================= ENGINE PICKER (springbreak.com pattern) =================
+  const ENGINES = {
+    claude:     {label:"Claude",         base:"https://claude.ai/new?q="},
+    chatgpt:    {label:"ChatGPT",        base:"https://chatgpt.com/?q="},
+    perplexity: {label:"Perplexity",     base:"https://www.perplexity.ai/search?q="},
+    copilot:    {label:"Copilot",        base:"https://copilot.microsoft.com/?q="},
+    grok:       {label:"Grok",           base:"https://grok.com/?q="},
+    googleai:   {label:"Google AI Mode", base:"https://www.google.com/search?udm=50&q="},
+  };
+  const SUFFIX = " Cite every fact with a source link and publish date, and clearly flag anything not yet confirmed for 2027. Today's date matters, so search the web for the latest info.";
+  let engine = 'claude';
+  try { engine = localStorage.getItem('sb27-engine') || 'claude'; } catch (e) {}
+  if (!ENGINES[engine]) engine = 'claude';
+  const link = p => ENGINES[engine].base + encodeURIComponent(p + SUFFIX);
+
+  // ================= RENDER =================
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const askBtns = (p, label='Latest in') => `<div class="ask">
+      <a class="btn btn-ask" data-ask="${esc(p)}" href="#" target="_blank" rel="nofollow noopener">✦ ${label} <span class="engine-name engine-label">Claude</span> ↗</a>
+      <button type="button" class="btn btn-ghost" data-copy="${esc(p)}">Copy prompt</button>
+    </div>`;
+  const $ = id => document.getElementById(id);
+
+  $('storyGrid').innerHTML = stories.map(s => s.lead ? `
+    <article class="card story lead-story">
+      <div class="thumb"><img src="${s.img}" alt="${esc(s.alt)}"><span class="rank">${s.rank}</span></div>
+      <div class="lead-body">
+        <div class="card-head"><p class="eyebrow">${s.eyebrow}</p><span class="badge ${s.badge[0]}">${s.badge[1]}</span></div>
+        <h3>${s.title}</h3>
+        <ul class="facts">${s.facts.map(f=>`<li>${f}</li>`).join('')}</ul>
+        <div class="card-foot">${askBtns(s.prompt)}</div>
+      </div>
+    </article>` : `
+    <article class="card story">
+      <div class="thumb"><img src="${s.img}" alt="${esc(s.alt)}" loading="lazy"><span class="rank">${s.rank}</span></div>
+      <div class="card-head"><p class="eyebrow">${s.eyebrow}</p><span class="badge ${s.badge[0]}">${s.badge[1]}</span></div>
+      <h3>${s.title}</h3>
+      <ul class="facts">${s.facts.map(f=>`<li>${f}</li>`).join('')}</ul>
+      <div class="card-foot">${askBtns(s.prompt)}</div>
+    </article>`).join('');
+
+  $('weekGrid').innerHTML = weeks.map(w => `
+    <div class="wk"><span class="badge ${w.tag[0]}">${w.tag[1]}</span><h4>${w.range}</h4><p>${w.note}</p></div>`).join('');
+
+  $('rankList').innerHTML = destinations.map(d => `
+    <li><span class="n">#${d.rank}</span><div><b>${d.name}</b><small>${d.where} · ${d.region==='us'?'U.S.':'International'}</small></div>
+      <a class="mini-ask" data-ask="${esc(destPrompt(d))}" href="#" target="_blank" rel="nofollow noopener">✦ Ask ↗</a></li>`).join('');
+
+  $('priceGrid').innerHTML = prices.map(p => `
+    <article class="card">
+      <div class="card-head"><div><p class="eyebrow">${p.rank ? `#${p.rank} · ` : ''}${p.seller}</p><h3>${p.dest}</h3></div></div>
+      <div class="price"><b>${p.price}</b><small>${p.unit}</small></div>
+      <p>${p.detail}</p>
+      <div class="card-foot">${askBtns(pricePrompt(p), 'Current price in')}</div>
+    </article>`).join('');
+
+  const st = {ok:["b-ok","Confirmed","dot-ok"], mid:["b-mid","Partly announced","dot-mid"], tba:["b-tba","TBA","dot-tba"]};
+  $('lineupGrid').innerHTML = lineups.map(l => `
+    <article class="card">
+      <div class="card-head"><div><p class="eyebrow">#${l.rank} · ${l.dest}</p><h3>${l.event}</h3></div><span class="badge ${st[l.status][0]}">${st[l.status][1]}</span></div>
+      <p>${l.when}</p>
+      ${l.artists.length ? `<div class="artists">${l.artists.map(a=>`<span>${a}</span>`).join('')}</div>` : ''}
+      <ul class="events">${l.extra.map(e=>`<li><span class="dot ${st[l.status][2]}"></span><div><b>${e.b}</b><small>${e.s}</small></div></li>`).join('')}</ul>
+      ${l.note ? `<p class="note">${l.note}</p>` : ''}
+      <div class="card-foot">${askBtns(lineupPrompt(l), 'New acts in')}</div>
+    </article>`).join('');
+
+  $('ruleGrid').innerHTML = rules.map(r => `
+    <article class="card">
+      <div class="card-head"><div><p class="eyebrow">#${r.rank} · Florida</p><h3>${r.dest}</h3></div><span class="badge ${r.level[0]}">${r.level[1]}</span></div>
+      <ul class="facts">${r.items.map(i=>`<li>${i}</li>`).join('')}</ul>
+      <a href="${r.src}" target="_blank" rel="noopener" style="font-size:13px">Official city site ↗</a>
+      <div class="card-foot">${askBtns(rulePrompt(r), 'Check rules in')}</div>
+    </article>`).join('');
+
+  $('chipGroups').innerHTML = promptGroups.map(g => `
+    <div class="chip-group"><span>${g.label}</span><div class="chips">
+      ${g.items.map(([k,l]) => `<button type="button" class="chip" data-prompt="${k}">${l}</button>`).join('')}
+    </div></div>`).join('');
+
+  const destSel = $('dest');
+  [...destinations.map(d=>d.name), ...extraDest].forEach(n => destSel.add(new Option(n, n)));
+
+  // ================= PROMPT HANDLING =================
+  const ta = $('prompt');
+  const fields = ['dest','week','size','city'].map($);
+  function fullPrompt(){
+    const [d,w,s,c] = fields.map(f => f.value.trim());
+    const bits = [];
+    if (d) bits.push(`destination: ${d}`);
+    if (w) bits.push(`week of ${w}`);
+    if (s) bits.push(`group of ${s}`);
+    if (c) bits.push(`flying from ${c}`);
+    const base = ta.value.trim() || 'What is the latest Spring Break 2027 news I should know before booking?';
+    return bits.length ? `${base}\n\nMy details: ${bits.join(', ')}.` : base;
+  }
+  function updateAiLinks(){
+    $('askEngine').href = link(fullPrompt());
+    document.querySelectorAll('a[data-ask]').forEach(a => a.href = link(a.dataset.ask));
+    document.querySelectorAll('.engine-label').forEach(el => el.textContent = ENGINES[engine].label);
+  }
+  const engineSel = $('engine');
+  engineSel.value = engine;
+  engineSel.addEventListener('change', () => {
+    engine = engineSel.value;
+    try { localStorage.setItem('sb27-engine', engine); } catch (e) {}
+    updateAiLinks();
+    toast(`Prompt links now open in ${ENGINES[engine].label}`);
+  });
+  function fill(text, key){
+    ta.value = text;
+    document.querySelectorAll('#chipGroups .chip').forEach(c => c.classList.toggle('active', c.dataset.prompt === key));
+    updateAiLinks();
+    $('ask').scrollIntoView({behavior:'smooth'});
+    setTimeout(() => { ta.focus({preventScroll:true}); ta.setSelectionRange(ta.value.length, ta.value.length); }, 500);
+    toast('Prompt added. Edit it or send it!');
+  }
+  function copy(text){
+    const done = () => toast('Copied to clipboard');
+    if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, () => toast('Copy failed. Select and copy manually.'));
+    else toast('Copy failed. Select and copy manually.');
+  }
+  document.addEventListener('click', e => {
+    const p = e.target.closest('[data-prompt]');
+    if (p && prompts[p.dataset.prompt]) return fill(prompts[p.dataset.prompt], p.dataset.prompt);
+    const c = e.target.closest('[data-copy]');
+    if (c) return copy(c.dataset.copy + SUFFIX);
+    const a = e.target.closest('#askEngine, a[data-ask]');
+    if (a) a.href = a.id === 'askEngine' ? link(fullPrompt()) : link(a.dataset.ask);
+  });
+  $('copyMain').addEventListener('click', () => copy(fullPrompt() + SUFFIX));
+  [ta, ...fields].forEach(el => { el.addEventListener('input', updateAiLinks); el.addEventListener('change', updateAiLinks); });
+  updateAiLinks();
+
+  let tt;
+  function toast(msg){
+    const t = $('toast'); t.textContent = msg; t.classList.add('show');
+    clearTimeout(tt); tt = setTimeout(() => t.classList.remove('show'), 2600);
+  }
+
+  // Days until peak window (Sat Mar 6, 2027)
+  const peak = new Date('2027-03-06T00:00:00-05:00').getTime();
+  $('cd').textContent = Math.max(0, Math.ceil((peak - Date.now()) / 864e5));
+</script>
+</body>
+</html>
